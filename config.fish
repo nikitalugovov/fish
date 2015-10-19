@@ -1,4 +1,9 @@
-set -g -x PATH /usr/local/bin $PATH
+set os (uname)
+switch $os
+case Darwin
+  set -g -x PATH /usr/local/bin $PATH
+end
+
 set __fish_git_prompt_showdirtystate 1
 set __fish_git_prompt_showstashstate 1
 set __fish_git_prompt_showuntrackedfiles 1
